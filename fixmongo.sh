@@ -14,13 +14,13 @@ opt=$1
 args=("$@")
 
 # Verify Commands
-if [ $opt = "" ]
+if [ "$opt" = "" ]
 then
         sudo rm /var/lib/mongodb/mongod.lock
         sudo mongod --repair
         sudo service mongodb start
         echo "MongoDB Fixed!"
-elif [ $opt = "help" ]
+elif [ "$opt" = "help" ]
 then
         echo "Welcome to FixMongo"
         echo "Author: Christopher EnyTC"
